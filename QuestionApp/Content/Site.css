@@ -1,0 +1,53 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.ko-grid {
+	margin-bottom: 1em;
+	width: 25em;
+	border: 1px solid silver;
+	background-color: White;
+}
+
+	.ko-grid th {
+		text-align: left;
+		background-color: Black;
+		color: White;
+	}
+
+	.ko-grid td, th {
+		padding: 0.4em;
+	}
+
+	.ko-grid tr:nth-child(odd) {
+		background-color: #DDD;
+	}
+
+.ko-grid-pageLinks {
+	margin-bottom: 1em;
+}
+
+	.ko-grid-pageLinks a {
+		padding: 0.5em;
+	}
+
+		.ko-grid-pageLinks a.selected {
+			background-color: Black;
+			color: White;
+		}
+

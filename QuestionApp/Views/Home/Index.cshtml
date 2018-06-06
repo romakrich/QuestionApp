@@ -1,0 +1,73 @@
+﻿<div data-bind="with: QuestionsViewModel">
+	
+	<div class="page-header">
+		<div class="alert alert-danger" data-bind="visible: errorMessage"><p data-bind="text: errorMessage"></p></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="panel-title">Questions</h2>
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label for="inputFilter">Search:</label> <input id="inputFilter" data-bind="value: filter, valueUpdate: 'afterkeydown'" />
+					</div>
+					<div data-bind='simpleGrid: gridViewModel'> </div>
+				</div>
+					<div class="panel-footer">
+						<a href="#" data-bind="click: addQuestion">Add Question</a>
+						<a href="#" data-bind="click: sortByQuestion">Sort Questions</a>
+					</div>
+				</div>
+		</div>
+
+		<!-- ko if:question() -->
+		<div class="col-md-6">
+			<div class="panel panel-default" data-bind="visible: questionIsVisible">
+				<div class="panel-heading">
+					<h2 class="panel-title">Question</h2>
+				</div>
+
+				<div class="panel-body">
+
+					<form data-bind="submit: saveQuestion">
+
+						<div class="form-group">
+							<label for="inputContent">Question</label>
+							<input type="text" class="form-control" id="inputContent" data-bind="value: question().QuestionContent" />
+						</div>
+
+						<div class="form-group">
+							<label for="inputAnswer">Answer</label>
+							<input type="text" class="form-control" id="inputAnswer" data-bind="value: question().Answer" />
+						</div>
+
+						<div class="form-group">
+							<label>Distractors</label>
+							<span data-bind="foreach: distractors">
+								<input type="number" class="form-control" data-bind="value: value" />
+								<a href="#" data-bind="click: deleteDistractor">Delete</a>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="panel-footer">
+					<span>
+						<button type="submit" class="btn btn-default" data-bind="click: saveQuestion">
+							Save
+						</button>
+						<a href="#" data-bind="click: addDistractor">Add Distractor</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- /ko -->
+	</div>
+</div>
+
+
+
+
+
