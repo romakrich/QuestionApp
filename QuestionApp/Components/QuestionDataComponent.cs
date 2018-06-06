@@ -5,12 +5,13 @@ using System.Linq;
 using System.Web;
 using QuestionApp.Common;
 using System.IO;
+using System.Web.Hosting;
 
 namespace QuestionApp.Components
 {
 	public class QuestionDataComponent : IQuestionDataComponent
 	{
-		const string dataFile = @"C:\Users\Roma\Source\Repos\QuestionApp\QuestionApp\Data\\question_data.csv";
+		string dataFile = HostingEnvironment.MapPath(@"/Data/code_challenge_question_dump.csv");
 
 		public List<QuestionDTO> GetQuestions()
 		{

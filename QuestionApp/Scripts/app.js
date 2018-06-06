@@ -28,7 +28,7 @@
 			{ headerText: "Answer", rowText: "Answer" }
 		],
 
-		pageSize: 10
+		pageSize: 50
 	});
 
 	self.getQuestion = function (item) {

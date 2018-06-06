@@ -13,12 +13,12 @@
 				<div class="panel-body">
 					<div class="form-group">
 						<label for="inputFilter">Search:</label> <input id="inputFilter" data-bind="value: filter, valueUpdate: 'afterkeydown'" />
+						<a href="#" data-bind="click: addQuestion">Add Question</a>
+						<a href="#" data-bind="click: sortByQuestion">Sort Questions</a>
 					</div>
 					<div data-bind='simpleGrid: gridViewModel'> </div>
 				</div>
 					<div class="panel-footer">
-						<a href="#" data-bind="click: addQuestion">Add Question</a>
-						<a href="#" data-bind="click: sortByQuestion">Sort Questions</a>
 					</div>
 				</div>
 		</div>
